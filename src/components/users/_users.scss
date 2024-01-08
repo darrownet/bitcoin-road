@@ -1,0 +1,91 @@
+.users {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  li {
+    border-top: 6px dashed $warmer;
+    width: 33.33%;
+    padding: 12px;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px 10px 10px 24px;
+    border-radius: 60px;
+    img {
+      width: 96px;
+      margin-right: 16px;
+      border-radius: 50%;
+      border: 1px solid;
+    }
+  }
+  a:hover {
+    background-color: rgba($neutral,0.25);
+  }
+
+  .filter-users {
+    position: relative;
+    padding: 20px;
+    input {
+      height: 48px;
+      background: transparent;
+      outline: none;
+      border: 1px solid $warmer;
+      width: 100%;
+      color:  rgba($neutral, 0.5);
+      font-size: 24px;
+      padding: 0 10px;
+    }
+  }
+
+  .filter-icon {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    opacity: .25;
+  }
+
+  .filter-users .filter-active {
+    color: rgba($neutral, 1);
+  }
+
+  @media (max-width: $breakpoint-large ) {
+    li {
+      width: 50%;
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet ) {
+    a {
+      font-size: 16px;
+      img {
+        width: 64px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-small ) {
+    li {
+      width: 100%;
+    }
+    a {
+      font-size: 18px;
+      img {
+        width: 96px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-xsmall ) {
+    a {
+      font-size: 16px;
+      img {
+        width: 64px;
+      }
+    }
+  }
+
+}

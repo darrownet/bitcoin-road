@@ -1,4 +1,4 @@
-const gameBoard = {
+export const gameBoard = {
 	spaces = [
 		{type:"normal", color:"red"},
 		{type: "normal", color: "purple"},
@@ -102,12 +102,12 @@ const specials = [
 
 const players = [
 	{color:"red"},
-	{color:"green"}, 
+	{color:"green"},
 	{color:"yellow"},
 	{color:"blue"}
 ];
 
-cards {
+const cards = {
 	red: {
 		double: 3,
 		single: 4
