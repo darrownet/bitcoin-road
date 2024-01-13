@@ -8,8 +8,7 @@ html, body {
 }
 
 body {
-  padding: 0 12px;
-  background-color: $warmer;
+  padding: 24px;
 }
 
 h1, h2, a {
@@ -47,6 +46,5 @@ a:hover {
 }
 
 .content {
-  background-color: $cooler;
-  border: 6px dashed $warmer;
+
 }

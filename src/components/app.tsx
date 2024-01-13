@@ -27,8 +27,6 @@ const App = () => {
     <Provider store={store}>
       <ServiceContextProvider value={services}>
         <Router>
-          <ErrorModal />
-          <Navigation/>
           <Routes/>
         </Router>
       </ServiceContextProvider>

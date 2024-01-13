@@ -1,0 +1,16 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  .space-section {
+    display: flex;
+  }
+  .sec1 {}
+  .sec2 {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+  .space {
+    width: 72px;
+    height: 72px;
+  }
+}

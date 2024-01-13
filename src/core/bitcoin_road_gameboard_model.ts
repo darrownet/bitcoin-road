@@ -1,5 +1,5 @@
 export const gameBoard = {
-	spaces = [
+	spaces: [
 		{type:"normal", color:"red"},
 		{type: "normal", color: "purple"},
 		{type: "normal", color: "yellow"},
@@ -84,30 +84,28 @@ export const gameBoard = {
 		{type: "normal", color: "green"},
 		{type: "final", color: "rainbow"}
 		]
-	]
-];
+}
 
-
-const skips = [
+export const skips = [
 	{location:3, destination:35},
 	{location:17, destination:24}
-];
+]
 
-const specials = [
+export const specials = [
 	{location:20, type:"peppermint"},
 	{location:32, type:"peanut"},
 	{location:49, type:"lollipop"},
 	{location:66, type:"icecream"},
-];
+]
 
-const players = [
+export const players = [
 	{color:"red"},
 	{color:"green"},
 	{color:"yellow"},
 	{color:"blue"}
-];
+]
 
-const cards = {
+export const cards = {
 	red: {
 		double: 3,
 		single: 4
@@ -132,4 +130,4 @@ const cards = {
 		double: 3,
 		single: 4
 	}
-};
+}

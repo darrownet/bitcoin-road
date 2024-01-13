@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import {Routes, Route, useLocation} from "react-router-dom";
-import Users from "./users/users";
-import UserDetails from "./user-details/user-details";
+import Game from "./game/game"
 
 const AppRoutes = () => {
 
@@ -14,8 +13,7 @@ const AppRoutes = () => {
   return (
     <div className="content">
       <Routes>
-        <Route path="/" element={<Users/>}/>
-        <Route path="/:login" element={<UserDetails/>}/>
+        <Route path="/" element={<Game/>}/>
       </Routes>
     </div>
   );
