@@ -65,7 +65,7 @@ const Game: FC<GameProps> = () => {
         <div className="game">
           <div className="space-section">
             {gameSpaces.spaces.map((space, index) => {
-              let spaceLabel = '';
+              let spaceLabel = `${index}`;
               if (space.type === 'skip') {
                 spaceLabel = `skip to ${space.to}`;
               }
