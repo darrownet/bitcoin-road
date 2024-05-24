@@ -19,3 +19,13 @@
     box-sizing: content-box;
   }
 }
+
+.game-on {
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+.players {
+  color: black;
+  margin-bottom: 25px;
+}

@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {FC, useState, FormEvent, ChangeEvent} from "react";
 import {shuffleArray} from "../../core/utils/shuffleArray"
 
 import {cards, gameSpaces} from "../../core/bitcoin_road_gameboard_model"
@@ -18,14 +18,49 @@ cardColors.forEach((color: Colors) => {
     cardDeck.push({color, spaces: 2});
   }
 });
-const shuffledDeck = shuffleArray(cardDeck);
-console.log(shuffledDeck);
 
 const Game: FC<GameProps> = () => {
+
+  const shuffledDeck = shuffleArray(cardDeck);
+
+  const [players, setPlayers] = useState({player1: false, player2: false, player3: false, player4: false});
+  const [gameRunning, setGameRunning] = useState(false);
+
+  const onSubmit = (event:  FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setGameRunning(true);
+  }
+
+  const onPlayerClick = (event: ChangeEvent<HTMLInputElement>) => {
+    console.log(event.target.value, event.target.checked);
+    const _players = {...players};
+    //@ts-ignore
+    _players[event.target.value] = event.target.checked
+    console.log(_players);
+  }
+
   return (
       <div>
-        <div className="player-section">
-          players
+        <div className={`players${(!gameRunning ? ' game-off' : ' game-on')}`}>
+          <form onSubmit={onSubmit}>
+            <label>
+              <span>player 1</span>
+              <input type="checkbox" value="player1" onChange={onPlayerClick}/>
+            </label>
+            <label>
+              <span>player 2</span>
+              <input type="checkbox" value="player2"/>
+            </label>
+            <label>
+              <span>player 3</span>
+              <input type="checkbox" value="player3"/>
+            </label>
+            <label>
+              <span>player 4</span>
+              <input type="checkbox" value="player4"/>
+            </label>
+            <input type="submit"/>
+          </form>
         </div>
         <div className="game">
           <div className="space-section">
