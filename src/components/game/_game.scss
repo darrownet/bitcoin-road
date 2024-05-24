@@ -1,8 +1,9 @@
 .game {
   display: flex;
-  flex-direction: column;
   .space-section {
     display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
   }
   .sec1 {}
   .sec2 {
@@ -12,5 +13,7 @@
   .space {
     width: 72px;
     height: 72px;
+    box-sizing: border-box;
+    border: 1px solid black;
   }
 }

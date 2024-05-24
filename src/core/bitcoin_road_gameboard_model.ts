@@ -1,3 +1,5 @@
+import {Cards} from "./typings/Cards";
+
 export const gameBoard = {
 	spaces: [
 		{type:"normal", color:"red"},
@@ -65,7 +67,7 @@ export const gameBoard = {
 		{type: "normal", color: "green"},
 		{type: "normal", color: "red"},
 		{type: "normal", color: "purple"},
-		{type: "normal", color: "yelllow"},
+		{type: "normal", color: "yellow"},
 		{type: "special", color: "pink"},
 		{type: "normal", color: "blue"},
 		{type: "normal", color: "orange"},
@@ -82,7 +84,7 @@ export const gameBoard = {
 		{type: "normal", color: "blue"},
 		{type: "normal", color: "orange"},
 		{type: "normal", color: "green"},
-		{type: "final", color: "rainbow"}
+		{type: "final", color: "brown"}
 		]
 }
 
@@ -105,7 +107,7 @@ export const players = [
 	{color:"blue"}
 ]
 
-export const cards = {
+export const cards:Cards = {
 	red: {
 		double: 3,
 		single: 4
