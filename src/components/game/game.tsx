@@ -1,15 +1,14 @@
 import {FC} from "react";
 import {shuffleArray} from "../../core/utils/shuffleArray"
 
-import {cards, gameBoard} from "../../core/bitcoin_road_gameboard_model"
-import {Colors, Card} from "../../core/typings/Cards";
+import {cards, gameSpaces} from "../../core/bitcoin_road_gameboard_model"
+import {Card, Colors} from "../../core/typings/Cards";
 
-type GameProps = {}
+type GameProps = {};
 
 const cardDeck:Card[] = [];
 const cardColors: Colors[] = Object.keys(cards) as Colors[];
 cardColors.forEach((color:Colors) => {
-  console.log(cards[color]);
   const singleCount: number = cards[color].single;
   const doubleCount: number = cards[color].double;
   for(let i: number = 1; i <= singleCount; i++) {
@@ -21,18 +20,22 @@ cardColors.forEach((color:Colors) => {
 });
 const shuffledDeck = shuffleArray(cardDeck);
 
-console.log(shuffledDeck);
-
-
 const Game: FC<GameProps> = () => {
   return (
       <div className="game">
         <div className="space-section">
-          {gameBoard.spaces.map((space, index) => {
+          {gameSpaces.spaces.map((space, index) => {
+            let spaceLabel = '';
+            if (space.type === 'skip') {
+              spaceLabel = `skip to ${space.to}`;
+            }
+            if (space.type === 'special') {
+              spaceLabel = space.color;
+            }
             return (
-                <div key={index} className="space" style={{background: space.color}}></div>
+                <div key={index} className="space" style={{background: space.color}}>{spaceLabel}</div>
             );
-          }).reverse()}
+          })}
         </div>
       </div>
   );

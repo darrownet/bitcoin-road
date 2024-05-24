@@ -2,18 +2,20 @@
   display: flex;
   .space-section {
     display: flex;
-    flex-direction: row-reverse;
     flex-wrap: wrap;
   }
-  .sec1 {}
-  .sec2 {
-    flex-direction: column-reverse;
-    align-items: flex-end;
-  }
   .space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 72px;
     height: 72px;
-    box-sizing: border-box;
+    margin-bottom: 21px;
     border: 1px solid black;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px;
+    box-sizing: content-box;
   }
 }
