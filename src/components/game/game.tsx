@@ -1,8 +1,9 @@
-import {FC, useState, FormEvent, ChangeEvent} from "react";
+import {FC, useEffect, useState, FormEvent, ChangeEvent} from "react";
 import {shuffleArray} from "../../core/utils/shuffleArray"
 
 import {cards, gameSpaces} from "../../core/bitcoin_road_gameboard_model"
 import {Card, Colors} from "../../core/typings/Cards";
+import {Players} from "../../core/typings/Players";
 
 type GameProps = {};
 
@@ -34,12 +35,15 @@ const Game: FC<GameProps> = () => {
   }
 
   const onPlayerClick = (event: ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.value, event.target.checked);
     const _players = {...players};
-    //@ts-ignore
-    _players[event.target.value] = event.target.checked
-    console.log(_players);
+    const player:Players = event.target.value as Players;
+    _players[player] = event.target.checked;
+    setPlayers(_players);
   }
+
+  useEffect(() => {
+    console.log(players);
+  }, [players])
 
   return (
       <div>
