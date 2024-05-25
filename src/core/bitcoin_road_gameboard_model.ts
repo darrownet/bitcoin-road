@@ -22,7 +22,7 @@ export const gameSpaces = {
     {type: "skip", color: "green", to: 35},
     {type: "normal", color: "red"},
     {type: "normal", color: "purple"},
-    {type: "special", color: "peppermint"},
+    {type: "special", color: "honey badger"},
     {type: "normal", color: "yellow"},
     {type: "normal", color: "blue"},
     {type: "normal", color: "orange"},
@@ -34,7 +34,7 @@ export const gameSpaces = {
     {type: "normal", color: "orange"},
     {type: "normal", color: "green"},
     {type: "normal", color: "red"},
-    {type: "special", color: "peanut"},
+    {type: "special", color: "pizza"},
     {type: "normal", color: "purple"},
     {type: "normal", color: "yellow"},
     {type: "normal", color: "blue"},
@@ -51,7 +51,7 @@ export const gameSpaces = {
     {type: "normal", color: "yellow"},
     {type: "normal", color: "blue"},
     {type: "normal", color: "orange"},
-    {type: "special", color: "lollipop"},
+    {type: "special", color: "lighting"},
     {type: "normal", color: "green"},
     {type: "normal", color: "red"},
     {type: "normal", color: "purple"},
@@ -68,7 +68,7 @@ export const gameSpaces = {
     {type: "normal", color: "red"},
     {type: "normal", color: "purple"},
     {type: "normal", color: "yellow"},
-    {type: "special", color: "ice cream"},
+    {type: "special", color: "cold storage"},
     {type: "normal", color: "blue"},
     {type: "normal", color: "orange"},
     {type: "normal", color: "green"},
@@ -120,19 +120,19 @@ export const cards: Cards = {
     double: 3,
     single: 4
   },
-	peppermint: {
+  honeybadger: {
 		double: 0,
 		single: 1
 	},
-	peanut: {
+	pizza: {
 		double: 0,
 		single: 1
 	},
-	lollipop: {
+	lighting: {
 		double: 0,
 		single: 1
 	},
-	icecream: {
+	coldstorage: {
 		double: 0,
 		single: 1
 	}

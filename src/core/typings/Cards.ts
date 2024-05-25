@@ -5,17 +5,17 @@ export enum Colors {
   blue = 'blue',
   orange = 'orange',
   green = 'green',
-  peppermint = 'peppermint',
-  peanut = 'peanut',
-  lollipop = 'lollipop',
-  icecream = 'icecream'
+  honeybadger = 'honeybadger',
+  pizza = 'pizza',
+  lighting = 'lighting',
+  coldstorage = 'coldstorage'
 }
 
 export enum Specials {
-  peppermint = 'peppermint',
-  peanut = 'peanut',
-  lollipop = 'lollipop',
-  icecream = 'icecream'
+  honeybadger = 'honeybadger',
+  pizza = 'pizza',
+  lighting = 'lighting',
+  coldstorage = 'coldstorage'
 }
 
 export enum CardType {
@@ -26,10 +26,10 @@ export enum CardType {
 export type CardKinds = {
   single: number,
   double: number,
-  peppermint?: string,
-  peanut?: string,
-  lollipop?: string,
-  icecream?: string
+  honeybadger?: string,
+  pizza?: string,
+  lighting?: string,
+  coldstorage?: string
 }
 
 export type Cards = {
@@ -39,10 +39,10 @@ export type Cards = {
   blue: CardKinds,
   orange: CardKinds,
   green: CardKinds,
-  peppermint: CardKinds,
-  peanut: CardKinds,
-  lollipop: CardKinds,
-  icecream: CardKinds
+  honeybadger: CardKinds,
+  pizza: CardKinds,
+  lighting: CardKinds,
+  coldstorage: CardKinds
 }
 
 export type Card = {

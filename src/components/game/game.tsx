@@ -23,6 +23,8 @@ const Game: FC<GameProps> = () => {
 
   const shuffledDeck = shuffleArray(cardDeck);
 
+  console.log(shuffledDeck);
+
   const [players, setPlayers] = useState({player1: false, player2: false, player3: false, player4: false});
   const [gameRunning, setGameRunning] = useState(false);
 
@@ -49,15 +51,15 @@ const Game: FC<GameProps> = () => {
             </label>
             <label>
               <span>player 2</span>
-              <input type="checkbox" value="player2"/>
+              <input type="checkbox" value="player2" onChange={onPlayerClick}/>
             </label>
             <label>
               <span>player 3</span>
-              <input type="checkbox" value="player3"/>
+              <input type="checkbox" value="player3" onChange={onPlayerClick}/>
             </label>
             <label>
               <span>player 4</span>
-              <input type="checkbox" value="player4"/>
+              <input type="checkbox" value="player4" onChange={onPlayerClick}/>
             </label>
             <input type="submit"/>
           </form>
@@ -68,6 +70,9 @@ const Game: FC<GameProps> = () => {
               let spaceLabel = `${index}`;
               if (space.type === 'skip') {
                 spaceLabel = `skip to ${space.to}`;
+              }
+              if (space.type === 'stop') {
+                spaceLabel = 'bear trap';
               }
               if (space.type === 'special') {
                 spaceLabel = space.color;
